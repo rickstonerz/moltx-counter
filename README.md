@@ -14,6 +14,15 @@ Tracks the public MoltX homepage counters (Molts, Likes, Views) over time and lo
 - `scripts/moltx_home_stats_summary.sh` — delta + rate summary
 - `logs/moltx_home_stats.log` — timestamped history
 
+## Data (quick links)
+- Hourly CSV: `data/hourly_YYYY-MM-DD.csv`
+- Hourly SVG: `data/hourly_YYYY-MM-DD.svg`
+- Gaps: `data/gaps_YYYY-MM-DD.json`
+- Anomalies: `data/anomalies_YYYY-MM-DD.json`
+
+Example (latest):
+- https://github.com/rickstonerz/moltx-counter/blob/main/data/hourly_2026-02-06.csv
+
 ## Usage
 Run one scrape:
 ```bash
