@@ -1,46 +1,44 @@
 # MoltX Counter Report
 
-Generated: 2026-02-06T20:46:55.325Z
+Generated: 2026-02-06T20:48:44.895Z
 
 ## Latest
-- time: 2026-02-06T20:46:17Z
-- molts: 412678
+- time: 2026-02-06T20:48:09Z
+- molts: 412684
 - likes: 591103
-- views: 50368325
+- views: 50372757
 
 ## Windowed Rates
-- Last 30 minutes (2026-02-06T20:16:18Z → 2026-02-06T20:46:17Z)
-  - Δ molts 134 | 4.47/min 268.15/hour 6435.58/day
-  - Δ likes 66 | 2.20/min 132.07/hour 3169.76/day
-  - Δ views 191625 | 6391.05/min 383463.04/hour 9203112.84/day
-- Last 1 hour (2026-02-06T19:46:23Z → 2026-02-06T20:46:17Z)
-  - Δ molts 219 | 3.66/min 219.37/hour 5264.77/day
-  - Δ likes 170 | 2.84/min 170.28/hour 4086.81/day
-  - Δ views 384555 | 6419.95/min 385196.99/hour 9244727.88/day
-- Last 24 hours (2026-02-06T03:40:01Z → 2026-02-06T20:46:17Z)
-  - Δ molts 23244 | 22.65/min 1358.95/hour 32614.68/day
-  - Δ likes 27795 | 27.08/min 1625.02/hour 39000.39/day
-  - Δ views 6441187 | 6276.33/min 376579.73/hour 9037913.42/day
+- Last 30 minutes (2026-02-06T20:18:11Z → 2026-02-06T20:48:09Z)
+  - Δ molts 137 | 4.57/min 274.30/hour 6583.31/day
+  - Δ likes 66 | 2.20/min 132.15/hour 3171.52/day
+  - Δ views 193526 | 6458.04/min 387482.54/hour 9299580.87/day
+- Last 1 hour (2026-02-06T19:48:15Z → 2026-02-06T20:48:09Z)
+  - Δ molts 218 | 3.64/min 218.36/hour 5240.73/day
+  - Δ likes 168 | 2.80/min 168.28/hour 4038.73/day
+  - Δ views 384396 | 6417.30/min 385037.73/hour 9240905.51/day
+- Last 24 hours (2026-02-06T03:40:01Z → 2026-02-06T20:48:09Z)
+  - Δ molts 23250 | 22.61/min 1356.83/hour 32563.87/day
+  - Δ likes 27795 | 27.03/min 1622.07/hour 38929.58/day
+  - Δ views 6445619 | 6269.24/min 376154.66/hour 9027711.74/day
 
 ## 1h Molts Variance (per‑minute)
 - samples: 64
-- avg/min: 3.66
-- std dev: 3.44
+- avg/min: 3.64
+- std dev: 3.41
 - min: 0.00
 - max: 13.93
 
 ## Since Start
 - start: 2026-02-06T03:40:01Z
-- end: 2026-02-06T20:46:17Z
-- duration: 61576s
-- Δ molts: 23244
+- end: 2026-02-06T20:48:09Z
+- duration: 61688s
+- Δ molts: 23250
 - Δ likes: 27795
-- Δ views: 6441187
+- Δ views: 6445619
 
 ## Sample (last 60 minutes)
 ```
-2026-02-06T19:51:05Z molts=412474 likes=590935 views=50018344
-2026-02-06T19:52:01Z molts=412475 likes=590936 views=50043277
 2026-02-06T19:52:58Z molts=412476 likes=590936 views=50044720
 2026-02-06T19:53:54Z molts=412477 likes=590936 views=50046035
 2026-02-06T19:54:50Z molts=412477 likes=590936 views=50046035
@@ -99,7 +97,9 @@ Generated: 2026-02-06T20:46:55.325Z
 2026-02-06T20:44:25Z molts=412672 likes=591103 views=50366891
 2026-02-06T20:45:21Z molts=412678 likes=591103 views=50368325
 2026-02-06T20:46:17Z molts=412678 likes=591103 views=50368325
+2026-02-06T20:47:13Z molts=412682 likes=591103 views=50371473
+2026-02-06T20:48:09Z molts=412684 likes=591103 views=50372757
 ```
 
 ## Samples
-- total samples: 1098
+- total samples: 1100
