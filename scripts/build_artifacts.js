@@ -53,32 +53,57 @@ function writeCSV(hours, outPath) {
 }
 
 function writeSVGLine(hours, outPath) {
-  // Simple SVG line chart of hourly moltx per-hour rate
-  const width = 900, height = 260, pad = 30;
-  const values = hours.map(h => h.rate_per_hour.molts);
-  if (values.length === 0) {
-    fs.writeFileSync(outPath, '<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260"></svg>');
+  // Fancy SVG: bars for Molts/hr, line for Likes/hr, dots for Views/hr (scaled)
+  const width = 1000, height = 320, pad = 40;
+  if (hours.length === 0) {
+    fs.writeFileSync(outPath, '<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320"></svg>');
     return;
   }
-  const min = Math.min(...values);
-  const max = Math.max(...values);
-  const span = Math.max(1, max - min);
-  const xStep = (width - 2*pad) / Math.max(1, values.length-1);
-  const points = values.map((v,i) => {
-    const x = pad + i*xStep;
-    const y = height - pad - ((v - min) / span) * (height - 2*pad);
+  const molts = hours.map(h => h.rate_per_hour.molts);
+  const likes = hours.map(h => h.rate_per_hour.likes);
+  const views = hours.map(h => h.rate_per_hour.views);
+  const maxVal = Math.max(...molts, ...likes);
+  const minVal = 0;
+  const span = Math.max(1, maxVal - minVal);
+  const xStep = (width - 2*pad) / Math.max(1, hours.length);
+  const barW = Math.max(4, xStep * 0.6);
+  const linePoints = likes.map((v,i) => {
+    const x = pad + i*xStep + barW/2;
+    const y = height - pad - ((v - minVal) / span) * (height - 2*pad);
     return `${x.toFixed(1)},${y.toFixed(1)}`;
   }).join(' ');
+  const viewScale = Math.max(...views) / Math.max(1, maxVal);
+  const dots = views.map((v,i) => {
+    const x = pad + i*xStep + barW/2;
+    const y = height - pad - ((v / viewScale - minVal) / span) * (height - 2*pad);
+    return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="2.5" fill="#f6ad55" />`;
+  }).join('');
+
+  const bars = molts.map((v,i) => {
+    const x = pad + i*xStep;
+    const h = ((v - minVal) / span) * (height - 2*pad);
+    const y = height - pad - h;
+    return `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${barW.toFixed(1)}" height="${h.toFixed(1)}" rx="2" fill="url(#barGrad)" />`;
+  }).join('');
+
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+  <defs>
+    <linearGradient id="barGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#4fd1c5"/>
+      <stop offset="100%" stop-color="#0e1116"/>
+    </linearGradient>
+  </defs>
   <rect x="0" y="0" width="${width}" height="${height}" fill="#0e1116"/>
   <g stroke="#2b313b" stroke-width="1">
     <line x1="${pad}" y1="${height-pad}" x2="${width-pad}" y2="${height-pad}"/>
     <line x1="${pad}" y1="${pad}" x2="${pad}" y2="${height-pad}"/>
   </g>
-  <polyline fill="none" stroke="#e6edf3" stroke-width="2" points="${points}"/>
-  <text x="${pad}" y="${pad-8}" fill="#9aa6b2" font-size="12">Hourly Molts rate (per hour)</text>
-  <text x="${pad}" y="${height-8}" fill="#9aa6b2" font-size="11">min ${min.toFixed(2)} · max ${max.toFixed(2)}</text>
+  ${bars}
+  <polyline fill="none" stroke="#63b3ed" stroke-width="2" points="${linePoints}"/>
+  ${dots}
+  <text x="${pad}" y="${pad-10}" fill="#9aa6b2" font-size="12">Hourly rate: Molts (bars), Likes (line), Views (dots scaled)</text>
+  <text x="${pad}" y="${height-10}" fill="#9aa6b2" font-size="11">max rate ~${Math.max(...molts, ...likes).toFixed(2)} / hour</text>
 </svg>`;
   fs.writeFileSync(outPath, svg);
 }
