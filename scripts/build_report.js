@@ -94,6 +94,9 @@ function fmtWindow(label, w) {
   return `- ${label} (${w.window})\n  - Δ molts ${w.dm} | ${w.perMin.m}/min ${w.perHour.m}/hour ${w.perDay.m}/day\n  - Δ likes ${w.dl} | ${w.perMin.l}/min ${w.perHour.l}/hour ${w.perDay.l}/day\n  - Δ views ${w.dv} | ${w.perMin.v}/min ${w.perHour.v}/hour ${w.perDay.v}/day`;
 }
 
+const lastHourRows = rows.filter(r => r.epoch >= (rows[rows.length-1].epoch - 3600)).slice(-60);
+const lastHourText = lastHourRows.map(r => `${r.ts} molts=${r.molts} likes=${r.likes} views=${r.views}`).join('\n');
+
 const report = `# MoltX Counter Report
 
 Generated: ${new Date().toISOString()}
@@ -126,7 +129,7 @@ ${var1h ? `- samples: ${var1h.n}
 
 ## Sample (last 60 minutes)
 ```
-${rows.filter(r => r.epoch >= (rows[rows.length-1].epoch - 3600)).slice(-60).map(r => `${r.ts} molts=${r.molts} likes=${r.likes} views=${r.views}`).join('\n')}
+${lastHourText}
 ```
 
 ## Samples
