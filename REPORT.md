@@ -1,41 +1,41 @@
 # MoltX Counter Report
 
-Generated: 2026-02-06T19:00:01.559Z
+Generated: 2026-02-06T19:30:01.612Z
 
 ## Latest
-- time: 2026-02-06T18:59:38Z
-- molts: 412336
-- likes: 590796
-- views: 49667864
+- time: 2026-02-06T19:29:33Z
+- molts: 412411
+- likes: 590863
+- views: 49860062
 
 ## Windowed Rates
-- Last 30 minutes (2026-02-06T18:30:32Z → 2026-02-06T18:59:38Z)
-  - Δ molts 91 | 3.13/min 187.63/hour 4503.09/day
-  - Δ likes 99 | 3.40/min 204.12/hour 4898.97/day
-  - Δ views 182006 | 6254.50/min 375270.10/hour 9006482.47/day
-- Last 1 hour (2026-02-06T18:00:27Z → 2026-02-06T18:59:38Z)
-  - Δ molts 185 | 3.13/min 187.55/hour 4501.27/day
-  - Δ likes 167 | 2.82/min 169.30/hour 4063.31/day
-  - Δ views 49667742 | 839218.39/min 50353103.69/hour 1208474488.54/day
-- Last 24 hours (2026-02-06T03:40:01Z → 2026-02-06T18:59:38Z)
-  - Δ molts 22902 | 24.90/min 1494.23/hour 35861.55/day
-  - Δ likes 27488 | 29.89/min 1793.44/hour 43042.63/day
-  - Δ views 5740726 | 6242.52/min 374551.24/hour 8989229.69/day
+- Last 30 minutes (2026-02-06T18:59:38Z → 2026-02-06T19:29:33Z)
+  - Δ molts 75 | 2.51/min 150.42/hour 3610.03/day
+  - Δ likes 67 | 2.24/min 134.37/hour 3224.96/day
+  - Δ views 192198 | 6424.45/min 385466.74/hour 9251201.78/day
+- Last 1 hour (2026-02-06T18:29:36Z → 2026-02-06T19:29:33Z)
+  - Δ molts 174 | 2.90/min 174.15/hour 4179.48/day
+  - Δ likes 175 | 2.92/min 175.15/hour 4203.50/day
+  - Δ views 388054 | 6472.96/min 388377.65/hour 9321063.55/day
+- Last 24 hours (2026-02-06T03:40:01Z → 2026-02-06T19:29:33Z)
+  - Δ molts 22977 | 24.20/min 1451.89/hour 34845.41/day
+  - Δ likes 27555 | 29.02/min 1741.17/hour 41788.11/day
+  - Δ views 5932924 | 6248.25/min 374895.15/hour 8997483.56/day
 
 ## 1h Molts Variance (per‑minute)
-- samples: 63
-- avg/min: 3.13
-- std dev: 3.08
+- samples: 64
+- avg/min: 2.91
+- std dev: 2.57
 - min: 0.00
-- max: 12.00
+- max: 8.57
 
 ## Since Start
 - start: 2026-02-06T03:40:01Z
-- end: 2026-02-06T18:59:38Z
-- duration: 55177s
-- Δ molts: 22902
-- Δ likes: 27488
-- Δ views: 5740726
+- end: 2026-02-06T19:29:33Z
+- duration: 56972s
+- Δ molts: 22977
+- Δ likes: 27555
+- Δ views: 5932924
 
 ## Samples
-- total samples: 984
+- total samples: 1016
