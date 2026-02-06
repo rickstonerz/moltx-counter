@@ -97,43 +97,48 @@ function fmtWindow(label, w) {
 const lastHourRows = rows.filter(r => r.epoch >= (rows[rows.length-1].epoch - 3600)).slice(-60);
 const lastHourText = lastHourRows.map(r => `${r.ts} molts=${r.molts} likes=${r.likes} views=${r.views}`).join('\n');
 
-const report = `# MoltX Counter Report
+const linesOut = [];
+linesOut.push('# MoltX Counter Report');
+linesOut.push('');
+linesOut.push(`Generated: ${new Date().toISOString()}`);
+linesOut.push('');
+linesOut.push('## Latest');
+linesOut.push(`- time: ${latest.ts}`);
+linesOut.push(`- molts: ${latest.molts}`);
+linesOut.push(`- likes: ${latest.likes}`);
+linesOut.push(`- views: ${latest.views}`);
+linesOut.push('');
+linesOut.push('## Windowed Rates');
+linesOut.push(fmtWindow('Last 30 minutes', w30m));
+linesOut.push(fmtWindow('Last 1 hour', w1h));
+linesOut.push(fmtWindow('Last 24 hours', w24h));
+linesOut.push('');
+linesOut.push('## 1h Molts Variance (per‑minute)');
+if (var1h) {
+  linesOut.push(`- samples: ${var1h.n}`);
+  linesOut.push(`- avg/min: ${var1h.avg}`);
+  linesOut.push(`- std dev: ${var1h.std}`);
+  linesOut.push(`- min: ${var1h.min}`);
+  linesOut.push(`- max: ${var1h.max}`);
+} else {
+  linesOut.push('- not enough data');
+}
+linesOut.push('');
+linesOut.push('## Since Start');
+linesOut.push(`- start: ${total.first.ts}`);
+linesOut.push(`- end: ${total.last.ts}`);
+linesOut.push(`- duration: ${total.dt}s`);
+linesOut.push(`- Δ molts: ${total.dm}`);
+linesOut.push(`- Δ likes: ${total.dl}`);
+linesOut.push(`- Δ views: ${total.dv}`);
+linesOut.push('');
+linesOut.push('## Sample (last 60 minutes)');
+linesOut.push('```');
+linesOut.push(lastHourText || '');
+linesOut.push('```');
+linesOut.push('');
+linesOut.push('## Samples');
+linesOut.push(`- total samples: ${rows.length}`);
+linesOut.push('');
 
-Generated: ${new Date().toISOString()}
-
-## Latest
-- time: ${latest.ts}
-- molts: ${latest.molts}
-- likes: ${latest.likes}
-- views: ${latest.views}
-
-## Windowed Rates
-${fmtWindow('Last 30 minutes', w30m)}
-${fmtWindow('Last 1 hour', w1h)}
-${fmtWindow('Last 24 hours', w24h)}
-
-## 1h Molts Variance (per‑minute)
-${var1h ? `- samples: ${var1h.n}
-- avg/min: ${var1h.avg}
-- std dev: ${var1h.std}
-- min: ${var1h.min}
-- max: ${var1h.max}` : '- not enough data'}
-
-## Since Start
-- start: ${total.first.ts}
-- end: ${total.last.ts}
-- duration: ${total.dt}s
-- Δ molts: ${total.dm}
-- Δ likes: ${total.dl}
-- Δ views: ${total.dv}
-
-## Sample (last 60 minutes)
-```
-${lastHourText}
-```
-
-## Samples
-- total samples: ${rows.length}
-`;
-
-fs.writeFileSync(outPath, report);
+fs.writeFileSync(outPath, linesOut.join('\n'));
