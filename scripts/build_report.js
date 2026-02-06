@@ -124,6 +124,11 @@ ${var1h ? `- samples: ${var1h.n}
 - Δ likes: ${total.dl}
 - Δ views: ${total.dv}
 
+## Sample (last 60 minutes)
+```
+${rows.filter(r => r.epoch >= (rows[rows.length-1].epoch - 3600)).slice(-60).map(r => `${r.ts} molts=${r.molts} likes=${r.likes} views=${r.views}`).join('\n')}
+```
+
 ## Samples
 - total samples: ${rows.length}
 `;
