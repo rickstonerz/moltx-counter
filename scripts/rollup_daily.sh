@@ -26,10 +26,10 @@ if (( TOTAL_LINES > LAST_LINE )); then
 fi
 
 # Build hourly aggregates from RAW_FILE
-node - <<'NODE'
+node - "$RAW_FILE" "$HOUR_FILE" <<'NODE'
 const fs = require('fs');
-const path = process.argv[1];
-const out = process.argv[2];
+const path = process.argv[2];
+const out = process.argv[3];
 if (!fs.existsSync(path)) process.exit(0);
 const lines = fs.readFileSync(path,'utf8').trim().split('\n').filter(Boolean);
 function parse(line){
@@ -70,8 +70,6 @@ for (const [hour, arr] of [...byHour.entries()].sort()) {
 const outObj = {date: path.split('/').pop().replace('.log',''), hours};
 fs.writeFileSync(out, JSON.stringify(outObj, null, 2));
 NODE
-
-"$RAW_FILE" "$HOUR_FILE"
 
 # Daily checksum (only when day rolls over; here we keep updated hash)
 sha256sum "$RAW_FILE" > "$RAW_FILE.sha256"
