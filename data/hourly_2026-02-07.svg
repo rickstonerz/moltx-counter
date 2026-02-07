@@ -11,9 +11,9 @@
     <line x1="40" y1="280" x2="960" y2="280"/>
     <line x1="40" y1="40" x2="40" y2="280"/>
   </g>
-  <rect x="40.0" y="230.4" width="110.4" height="49.6" rx="2" fill="url(#barGrad)" /><rect x="224.0" y="165.1" width="110.4" height="114.9" rx="2" fill="url(#barGrad)" /><rect x="408.0" y="172.1" width="110.4" height="107.9" rx="2" fill="url(#barGrad)" /><rect x="592.0" y="154.4" width="110.4" height="125.6" rx="2" fill="url(#barGrad)" /><rect x="776.0" y="146.7" width="110.4" height="133.3" rx="2" fill="url(#barGrad)" />
-  <polyline fill="none" stroke="#63b3ed" stroke-width="2" points="95.2,95.0 279.2,177.2 463.2,110.6 647.2,88.3 831.2,40.0"/>
-  <circle cx="95.2" cy="68.1" r="2.5" fill="#f6ad55" /><circle cx="279.2" cy="40.0" r="2.5" fill="#f6ad55" /><circle cx="463.2" cy="64.3" r="2.5" fill="#f6ad55" /><circle cx="647.2" cy="97.6" r="2.5" fill="#f6ad55" /><circle cx="831.2" cy="112.8" r="2.5" fill="#f6ad55" />
+  <rect x="40.0" y="226.6" width="110.4" height="53.4" rx="2" fill="url(#barGrad)" /><rect x="224.0" y="156.4" width="110.4" height="123.6" rx="2" fill="url(#barGrad)" /><rect x="408.0" y="163.9" width="110.4" height="116.1" rx="2" fill="url(#barGrad)" /><rect x="592.0" y="144.8" width="110.4" height="135.2" rx="2" fill="url(#barGrad)" /><rect x="776.0" y="144.5" width="110.4" height="135.5" rx="2" fill="url(#barGrad)" />
+  <polyline fill="none" stroke="#63b3ed" stroke-width="2" points="95.2,80.8 279.2,169.3 463.2,97.6 647.2,73.6 831.2,40.0"/>
+  <circle cx="95.2" cy="68.1" r="2.5" fill="#f6ad55" /><circle cx="279.2" cy="40.0" r="2.5" fill="#f6ad55" /><circle cx="463.2" cy="64.3" r="2.5" fill="#f6ad55" /><circle cx="647.2" cy="97.6" r="2.5" fill="#f6ad55" /><circle cx="831.2" cy="119.2" r="2.5" fill="#f6ad55" />
   <text x="40" y="30" fill="#9aa6b2" font-size="12">Hourly rate: Molts (bars), Likes (line), Views (dots scaled)</text>
-  <text x="40" y="310" fill="#9aa6b2" font-size="11">max rate ~465.25 / hour</text>
+  <text x="40" y="310" fill="#9aa6b2" font-size="11">max rate ~432.20 / hour</text>
 </svg>
