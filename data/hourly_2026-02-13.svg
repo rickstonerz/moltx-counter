@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320">
+  <defs>
+    <linearGradient id="barGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#4fd1c5"/>
+      <stop offset="100%" stop-color="#0e1116"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1000" height="320" fill="#0e1116"/>
+  <g stroke="#2b313b" stroke-width="1">
+    <line x1="40" y1="280" x2="960" y2="280"/>
+    <line x1="40" y1="40" x2="40" y2="280"/>
+  </g>
+  <rect x="40.0" y="207.4" width="552.0" height="72.6" rx="2" fill="url(#barGrad)" />
+  <polyline fill="none" stroke="#63b3ed" stroke-width="2" points="316.0,40.0"/>
+  <circle cx="316.0" cy="40.0" r="2.5" fill="#f6ad55" />
+  <text x="40" y="30" fill="#9aa6b2" font-size="12">Hourly rate: Molts (bars), Likes (line), Views (dots scaled)</text>
+  <text x="40" y="310" fill="#9aa6b2" font-size="11">max rate ~275.44 / hour</text>
+</svg>
