@@ -11,9 +11,9 @@
     <line x1="40" y1="280" x2="960" y2="280"/>
     <line x1="40" y1="40" x2="40" y2="280"/>
   </g>
-  <rect x="40.0" y="237.1" width="110.4" height="42.9" rx="2" fill="url(#barGrad)" /><rect x="224.0" y="183.9" width="110.4" height="96.1" rx="2" fill="url(#barGrad)" /><rect x="408.0" y="167.4" width="110.4" height="112.6" rx="2" fill="url(#barGrad)" /><rect x="592.0" y="151.9" width="110.4" height="128.1" rx="2" fill="url(#barGrad)" /><rect x="776.0" y="122.5" width="110.4" height="157.5" rx="2" fill="url(#barGrad)" />
-  <polyline fill="none" stroke="#63b3ed" stroke-width="2" points="95.2,167.8 279.2,44.0 463.2,40.0 647.2,104.6 831.2,58.7"/>
-  <circle cx="95.2" cy="59.3" r="2.5" fill="#f6ad55" /><circle cx="279.2" cy="40.0" r="2.5" fill="#f6ad55" /><circle cx="463.2" cy="44.0" r="2.5" fill="#f6ad55" /><circle cx="647.2" cy="53.3" r="2.5" fill="#f6ad55" /><circle cx="831.2" cy="53.1" r="2.5" fill="#f6ad55" />
+  <rect x="40.0" y="237.1" width="110.4" height="42.9" rx="2" fill="url(#barGrad)" /><rect x="224.0" y="183.9" width="110.4" height="96.1" rx="2" fill="url(#barGrad)" /><rect x="408.0" y="167.4" width="110.4" height="112.6" rx="2" fill="url(#barGrad)" /><rect x="592.0" y="151.9" width="110.4" height="128.1" rx="2" fill="url(#barGrad)" /><rect x="776.0" y="135.5" width="110.4" height="144.5" rx="2" fill="url(#barGrad)" />
+  <polyline fill="none" stroke="#63b3ed" stroke-width="2" points="95.2,167.8 279.2,44.0 463.2,40.0 647.2,104.6 831.2,95.7"/>
+  <circle cx="95.2" cy="59.3" r="2.5" fill="#f6ad55" /><circle cx="279.2" cy="40.0" r="2.5" fill="#f6ad55" /><circle cx="463.2" cy="44.0" r="2.5" fill="#f6ad55" /><circle cx="647.2" cy="53.3" r="2.5" fill="#f6ad55" /><circle cx="831.2" cy="58.0" r="2.5" fill="#f6ad55" />
   <text x="40" y="30" fill="#9aa6b2" font-size="12">Hourly rate: Molts (bars), Likes (line), Views (dots scaled)</text>
   <text x="40" y="310" fill="#9aa6b2" font-size="11">max rate ~761.42 / hour</text>
 </svg>
