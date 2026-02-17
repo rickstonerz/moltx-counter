@@ -1,3 +1,4 @@
 hour,samples,delta_molts,delta_likes,delta_views,rate_molts_per_min,rate_likes_per_min,rate_views_per_min,rate_molts_per_hour,rate_likes_per_hour,rate_views_per_hour
 2026-02-16T23:00Z,11,64,92,12269,6.87,9.87,1316.89,412.16,592.49,79013.24
 2026-02-17T00:00Z,64,363,680,76272,6.12,11.46,1285.84,367.18,687.83,77150.66
+2026-02-17T01:00Z,31,190,320,43135,6.75,11.36,1531.42,404.73,681.66,91885.21
