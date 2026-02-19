@@ -11,9 +11,9 @@
     <line x1="40" y1="280" x2="960" y2="280"/>
     <line x1="40" y1="40" x2="40" y2="280"/>
   </g>
-  <rect x="40.0" y="194.2" width="92.0" height="85.8" rx="2" fill="url(#barGrad)" /><rect x="193.3" y="81.8" width="92.0" height="198.2" rx="2" fill="url(#barGrad)" /><rect x="346.7" y="107.1" width="92.0" height="172.9" rx="2" fill="url(#barGrad)" /><rect x="500.0" y="68.5" width="92.0" height="211.5" rx="2" fill="url(#barGrad)" /><rect x="653.3" y="68.6" width="92.0" height="211.4" rx="2" fill="url(#barGrad)" /><rect x="806.7" y="97.4" width="92.0" height="182.6" rx="2" fill="url(#barGrad)" />
-  <polyline fill="none" stroke="#63b3ed" stroke-width="2" points="86.0,143.2 239.3,89.5 392.7,101.9 546.0,113.2 699.3,132.9 852.7,40.0"/>
-  <circle cx="86.0" cy="50.7" r="2.5" fill="#f6ad55" /><circle cx="239.3" cy="40.0" r="2.5" fill="#f6ad55" /><circle cx="392.7" cy="54.3" r="2.5" fill="#f6ad55" /><circle cx="546.0" cy="80.9" r="2.5" fill="#f6ad55" /><circle cx="699.3" cy="86.4" r="2.5" fill="#f6ad55" /><circle cx="852.7" cy="77.3" r="2.5" fill="#f6ad55" />
+  <rect x="40.0" y="182.7" width="92.0" height="97.3" rx="2" fill="url(#barGrad)" /><rect x="193.3" y="55.1" width="92.0" height="224.9" rx="2" fill="url(#barGrad)" /><rect x="346.7" y="83.7" width="92.0" height="196.3" rx="2" fill="url(#barGrad)" /><rect x="500.0" y="40.0" width="92.0" height="240.0" rx="2" fill="url(#barGrad)" /><rect x="653.3" y="40.1" width="92.0" height="239.9" rx="2" fill="url(#barGrad)" /><rect x="806.7" y="79.0" width="92.0" height="201.0" rx="2" fill="url(#barGrad)" />
+  <polyline fill="none" stroke="#63b3ed" stroke-width="2" points="86.0,124.8 239.3,63.8 392.7,77.8 546.0,90.7 699.3,113.1 852.7,41.0"/>
+  <circle cx="86.0" cy="50.7" r="2.5" fill="#f6ad55" /><circle cx="239.3" cy="40.0" r="2.5" fill="#f6ad55" /><circle cx="392.7" cy="54.3" r="2.5" fill="#f6ad55" /><circle cx="546.0" cy="80.9" r="2.5" fill="#f6ad55" /><circle cx="699.3" cy="86.4" r="2.5" fill="#f6ad55" /><circle cx="852.7" cy="87.2" r="2.5" fill="#f6ad55" />
   <text x="40" y="30" fill="#9aa6b2" font-size="12">Hourly rate: Molts (bars), Likes (line), Views (dots scaled)</text>
-  <text x="40" y="310" fill="#9aa6b2" font-size="11">max rate ~663.27 / hour</text>
+  <text x="40" y="310" fill="#9aa6b2" font-size="11">max rate ~584.47 / hour</text>
 </svg>
